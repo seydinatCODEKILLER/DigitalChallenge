@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+/*-----------------------------------  HEADER -------------------------------------------*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  border-bottom: solid 1px white;
+  box-shadow: 0px 6px 10px rgba(250, 249, 249, 0.3);
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.header-bottom .nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}
+
+/*-----------------------------------  SECTION 1 -------------------------------------------*/
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.section-1 .section-haut {
+  text-align: center;
+}
+
+.section-haut .title-section-1 {
+  color: white;
+  font-size: 70px;
+  letter-spacing: 0.36px;
+  font-weight: 400;
+  /* background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  ); */
+}
+
+.section-haut .para-section-1 {
+  color: white;
+  font-size: 18px;
+}
+
+.section-bas {
+  width: 100%;
+  height: 100vh;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-bas video {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------  SECTION 2 -------------------------------------------*/
+
+.section-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 65px;
+  margin-top: 80px;
+  gap: 70px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.title .ligne {
+  height: 1vh;
+  width: 15%;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.title-section-2 {
+  font-size: 50px;
+  color: white;
+}
+
+.evenement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eve-img {
+  width: 45%;
+  height: 60vh;
+  background-image: url(../Assets/images/image1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eve-desc {
+  color: white;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-section-2 {
+  padding: 12px 50px;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border: solid 1px white;
+  color: white;
+
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  outline: none;
+}
+
+.img-1 {
+  background-image: url(../Assets/images/image2.svg);
+}
+
+.btn_evenement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+}
+
+.btn_evenement .btn-eve {
+  padding: 18px 35px;
+  border: 1px solid white;
+  color: white;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  outline: none;
+}
+
+.btn-eve:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn-eve:active {
+  color: #000;
+}
+
+.btn-eve:active:after {
+  background: transparent;
+}
+
+.btn-eve:hover:before {
+  opacity: 1;
+}
+
+.btn-eve:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.section-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid white;
+  margin-top: 30px;
+  padding: 15px 30px;
+}
+
+.section-3 p {
+  color: white;
+}
+
+.reseau {
+  display: flex;
+  gap: 10px;
+}
+
+.icone {
+  color: white;
+  width: 35px;
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border: solid 1px white;
+  cursor: pointer;
+}
+
+.icone:hover {
+  background-color: white;
+}
+
+.icone:hover .face {
+  color: blue;
+}
+
+.icone:hover .twi {
+  color: rgb(64, 206, 250);
+}
+
+.icone:hover .linkdi {
+  color: blue;
+}
+
+.icone:hover .you {
+  color: red;
+}
