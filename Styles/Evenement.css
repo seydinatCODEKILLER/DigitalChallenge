@@ -13,6 +13,32 @@ body {
 
 /*-----------------------------------  HEADER -------------------------------------------*/
 
+.nav__item {
+  position: relative; /* Position relative pour le pseudo-élément */
+  transition: color 0.3s;
+}
+
+.nav__item::after {
+  content: ""; /* Le contenu est vide, car nous créons une ligne */
+  position: absolute; /* Position absolue pour le pseudo-élément */
+  left: 0; /* Début de la ligne */
+  bottom: -10px; /* Distance de la ligne par rapport au texte */
+  width: 100%; /* La ligne s'étend sur toute la largeur du lien */
+  height: 4px; /* Épaisseur de la ligne */
+  background-color: #ff00c8; /* Couleur de la ligne (vous pouvez la personnaliser) */
+  transform: scaleX(0); /* Échelle horizontale initiale pour cacher la ligne */
+  transition: transform 0.3s; /* Animation de l'échelle au survol */
+}
+
+.nav__item:hover,
+.nav__item:focus {
+  color: #ff00c8;
+}
+
+.nav__item:focus::after {
+  transform: scaleX(1);
+}
+
 .header {
   display: flex;
   flex-direction: column;
